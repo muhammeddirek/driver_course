@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -24,6 +23,27 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+h1 {
+  font-size: calc(100% + 4vw);
+}
+
+h2 {
+  font-size: calc(100% + 3vw);
+}
+
+h3 {
+  font-size: calc(100% + 2vw);
+}
+
+h4 {
+  font-size: calc(100% + 1vw);
+}
+
+button {
+  /* font-size: calc(100% + 0.5vw); */
+  font-size: 20px;
 }
 
 @layer utilities {
