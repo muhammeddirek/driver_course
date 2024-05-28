@@ -1,0 +1,131 @@
+{
+  "EhliyetSiniflari": [
+    {
+      "EhliyetSinifi": "A1",
+      "GecerlilikSuresi": "10 Yıl",
+      "EhliyetID": "83456"
+    },
+    {
+      "EhliyetSinifi": "A2",
+      "GecerlilikSuresi": "10 Yıl",
+      "EhliyetID": "29834"
+    },
+    {
+      "EhliyetSinifi": "A",
+      "GecerlilikSuresi": "10 Yıl",
+      "EhliyetID": "45321"
+    },
+    {
+      "EhliyetSinifi": "B1",
+      "GecerlilikSuresi": "10 Yıl",
+      "EhliyetID": "15782"
+    },
+    {
+      "EhliyetSinifi": "B",
+      "GecerlilikSuresi": "10 Yıl",
+      "EhliyetID": "34920"
+    },
+    {
+      "EhliyetSinifi": "BE",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "54218"
+    },
+    {
+      "EhliyetSinifi": "C1",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "73106"
+    },
+    {
+      "EhliyetSinifi": "C1E",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "48927"
+    },
+    {
+      "EhliyetSinifi": "C",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "60384"
+    },
+    {
+      "EhliyetSinifi": "CE",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "21563"
+    },
+    {
+      "EhliyetSinifi": "D1",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "92450"
+    },
+    {
+      "EhliyetSinifi": "D1E",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "67891"
+    },
+    {
+      "EhliyetSinifi": "D",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "83746"
+    },
+    {
+      "EhliyetSinifi": "DE",
+      "GecerlilikSuresi": "5 Yıl",
+      "EhliyetID": "50237"
+    },
+    {
+      "EhliyetSinifi": "F",
+      "GecerlilikSuresi": "10 Yıl",
+      "EhliyetID": "37419"
+    },
+    {
+      "EhliyetSinifi": "G",
+      "GecerlilikSuresi": "10 Yıl",
+      "EhliyetID": "69102"
+    },
+    {
+      "EhliyetSinifi": "M",
+      "GecerlilikSuresi": "10 Yıl",
+      "EhliyetID": "80573"
+    }
+  ],
+  "Dersler": [
+    {
+      "DersAdi": "Trafik Kuralları",
+      "DersGunu": "Pazartesi"
+    },
+    {
+      "DersAdi": "İlk Yardım",
+      "DersGunu": "Salı"
+    },
+    {
+      "DersAdi": "Motor ve Araç Tekniği",
+      "DersGunu": "Çarşamba"
+    },
+    {
+      "DersAdi": "Güvenli Sürüş Teknikleri",
+      "DersGunu": "Perşembe"
+    },
+    {
+      "DersAdi": "Direksiyon Eğitimi",
+      "DersGunu": "Cuma"
+    }
+  ],
+  "KursBilgileri": [
+    {
+      "KursID": "17823",
+      "Ucret": "20.000 TL",
+      "KursTel": "0850 231 45 21",
+      "Email": "info@driver.com",
+      "KursAdres": "Elazığ / Merkez Palu"
+    }
+  ],
+  "Ücret": [
+    {
+      "Plan": "Temel Plan - 5.000 TL"
+    },
+    {
+      "Plan": "Standart Plan - 10.000 TL"
+    },
+    {
+      "Plan": "Pro Plan - 30.000 TL"
+    }
+  ]
+}

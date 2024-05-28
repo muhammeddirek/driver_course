@@ -18,11 +18,15 @@ export default function Navbar() {
     <div className="flex-none">
       <ul className="menu menu-horizontal px-1 items-center gap-7">
         <li><a>
-        <Link href="/ders">Kurs Satın Al</Link>  
+        <Link href="/kurs_satin_al">Kurs Satın Al</Link>  
         </a></li>
         <li><a><Link href="/kurs_bilgisi">Kurs Bilgisi</Link></a></li>
         <li>
-          <button className="btn btn-neutral rounded">Login</button>
+        <a><button className="btn btn-neutral rounded">
+        <Link href="/login">Login</Link>
+        
+        </button></a>
+          
         </li>
       </ul>
     </div>
