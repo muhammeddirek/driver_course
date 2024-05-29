@@ -86,6 +86,11 @@
       "EhliyetID": "80573"
     }
   ],
+    {
+      "EhliyretSinifi":"V",
+      "GecerlilikSuresi":"1 yıl",
+      "EhliyetID":"11111"
+    }
   "Dersler": [
     {
       "DersAdi": "Trafik Kuralları",
