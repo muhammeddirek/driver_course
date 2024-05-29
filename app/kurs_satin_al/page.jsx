@@ -12,8 +12,8 @@ export default function page() {
           </div>
             <select className="select select-bordered w-full max-w-xl">
         <option disabled selected>Ehliyet Sınıfları</option>
-        {tableDatabase.EhliyetSiniflari.map((item) => (
-                <option>{item.EhliyetSinifi + " - Sınıfı"}</option>
+        {tableDatabase.EhliyetSiniflari.map((item, index) => (
+                <option key={index}>{item.EhliyetSinifi + " - Sınıfı"}</option>
               ))}
       </select>
       </div>
@@ -23,8 +23,8 @@ export default function page() {
           </div>
             <select className="select select-bordered w-full max-w-xl">
         <option disabled selected>Planlar</option>
-        {tableDatabase.Ücret.map((item) => (
-                <option>{item.Plan}</option>
+        {tableDatabase.Ücret.map((item,index) => (
+                <option key={index}>{item.Plan}</option>
               ))}
       </select>
       </div>
