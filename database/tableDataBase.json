@@ -84,13 +84,13 @@
       "EhliyetSinifi": "M",
       "GecerlilikSuresi": "10 Yıl",
       "EhliyetID": "80573"
-    }
-  ],
+    },
     {
-      "EhliyretSinifi":"V",
+      "EhliyetSinifi":"V",
       "GecerlilikSuresi":"1 yıl",
       "EhliyetID":"11111"
     }
+  ],
   "Dersler": [
     {
       "DersAdi": "Trafik Kuralları",
