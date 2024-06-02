@@ -9,5 +9,21 @@
     "PersonelTelefonNumarasi": "123124124",
     "DersKodu": "dasdasfa",
     "KursID": "1231241"
+  },
+  {
+    "PersonelID": "1717268778610",
+    "PersonelAdi": "dsa",
+    "PersonelSoyadi": "fasfa",
+    "PersonelTelefonNumarasi": "31212561612666666",
+    "PersonelAdres": "",
+    "PersonelMaas": "",
+    "PersonelGorev": "",
+    "PersonelinGirdigiDersKodu": "",
+    "PersonelinGirdigiKursID": "",
+    "PersonelAdresi": "gasda",
+    "PersonelMaasi": "3123124124",
+    "PersonelGorevi": "asdasd",
+    "DersKodu": "3dasdasdasd",
+    "KursID": "3123213123"
   }
 ]

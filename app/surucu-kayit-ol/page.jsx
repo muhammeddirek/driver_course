@@ -5,7 +5,7 @@ export default function page() {
   return (
     <section className="min-h-screen flex flex-col items-center  bg-base-200 gap-10 py-20 ">
       <div className="items-center flex flex-col gap-20">
-        <h1 className="text-5xl font-bold">Login</h1>
+        <h1 className="text-5xl font-bold">Sürücü Kayıt Ol</h1>
         <div className="min-w-96 flex flex-col gap-7">
           <label className="input input-bordered flex items-center gap-2">
             <svg
@@ -35,21 +35,8 @@ export default function page() {
             <input type="password" className="grow" value="" />
           </label>
           <button className="btn btn-primary">Login</button>
-          <div className="bg-red-500 text-sm font-bold w-fit px-1.5 py-2 rounded">
-            Error Message
-          </div>
-          <div className="flex flex-col justify-center items-center w-full">
-            Hesabınız yok mu?{" "}
-            <div>
-              <Link className="btn btn-link" href="/personel-kayit-ol">
-                Personel Kaydı{" "}
-              </Link>
-              <Link className="btn btn-link" href="/surucu-kayit-ol">
-                {" "}
-                Sürücü Kaydı{" "}
-              </Link>
-            </div>
-          </div>
+          <div className="bg-red-500 text-sm font-bold w-fit px-1.5 py-2 rounded">Error Message</div>
+          <div className="flex justify-center items-center w-full">Hesabınız var mı? <Link className="btn btn-link"href="/login"> Giriş Yap! </Link></div>
         </div>
       </div>
     </section>
