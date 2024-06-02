@@ -6,10 +6,10 @@ export default function Page() {
   const [formData, setFormData] = useState({
     PersonelAdi: '',
     PersonelSoyadi: '',
+    PersonelTelefonNumarasi: '',
     PersonelAdresi: '',
     PersonelMaasi: '',
     PersonelGorevi: '',
-    PersonelTelefonNumarasi: '',
     DersKodu: '',
     KursID: ''
   });
