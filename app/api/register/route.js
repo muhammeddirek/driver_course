@@ -4,9 +4,9 @@ import User from "@/models/user";
 
 export async function POST(req) {
   try {
-    const { name, mail, password } = await req.json();
+    const { name, email, password } = await req.json();
     await connectMongoDB();
-    await User.create({ name, mail, password: password });
+    await User.create({ name, email, password: password });
 
     return NextResponse.json(
       { message: "Kullanıcı Kaydoldu." },

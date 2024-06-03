@@ -1,53 +1,49 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default  function Page() {
   const [name, setName] = useState("");
-  const [mail, setMail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const  handleSubmit  = async (e) => {
+  const router = useRouter();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if(!name || !mail || !password) {
-      setError("Tüm alanlar doldurulmalı!");
+    if (!name || !email || !password) {
+      setError("All fields are necessary.");
       return;
     }
-      try {
-        const resUserExists = await fetch("api/userExists", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            mail,
-          }),
-        });
-  
-        const { user } = await resUserExists.json();
-        console.log("user: ",user)
-  
-        if (user) {
-          setError("Kullanıcı bulunmakta!");
-          return;
-        }
-        const res = await fetch("api/register", {
-          method:"POST",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({
-            name, mail, password
-          })
-        })
-        if(res.ok) {
-          const form = e.target;
-          form.reset()
-        } else {
-          console.log("Kayıt olma başarısız")
-        }
-      } catch(error) {
-        console.log("Kayıt esnasında hata meydana geldi: ", error)
+
+    try {
+
+      const res = await fetch("api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+        }),
+      });
+
+      if (res.ok) {
+        const form = e.target;
+        form.reset();
+        router.push("/");
+      } else {
+        console.log("User registration failed.");
       }
+    } catch (error) {
+      console.log("Error during registration: ", error);
     }
+  };
   
 
   return (
@@ -87,7 +83,7 @@ export default  function Page() {
                 <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
               </svg>
               <input
-                onChange={(e) => setMail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 type="text"
                 className="grow"
                 placeholder="Email"

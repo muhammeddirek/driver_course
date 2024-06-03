@@ -1,15 +1,18 @@
 import { connectMongoDB } from "@/lib/mongodb";
 import User from "@/models/user";
+import { NextResponse } from "next/server";
 
 export default async function POST(req) {
   try {
     await connectMongoDB();
-    const { mail } = req.json();
-    const user = await User.findOne({ mail }).select("_id");
-    console.log("user sdasd: ", user);
+    const { email } = await req.json(); // İsteği ayrıştır
+    const user = await User.findOne({ email }).select("_id");
+
+    console.log("User found: ", user);
 
     return NextResponse.json({ user });
   } catch (error) {
-    console.log(error);
+    console.error("Error in userExists API: ", error);
+    return NextResponse.json({ error: "An error occurred" }, { status: 500 });
   }
 }
