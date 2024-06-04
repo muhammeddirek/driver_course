@@ -27,6 +27,7 @@ export default function Page() {
         return;
       }
 
+
       router.replace("dashboard");
     } catch (error) {
       console.log(error);
