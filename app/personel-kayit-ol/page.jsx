@@ -12,7 +12,7 @@ export default  function Page() {
   const router = useRouter();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
     if (!name || !email || !password) {
       setError("All fields are necessary.");
@@ -20,7 +20,6 @@ export default  function Page() {
     }
 
     try {
-
       const res = await fetch("api/register", {
         method: "POST",
         headers: {

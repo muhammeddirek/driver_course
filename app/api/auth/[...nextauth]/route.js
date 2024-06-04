@@ -11,11 +11,11 @@ export const authOptions = {
       credentials: {},
 
       async authorize(credentials) {
-        const { mail, password } = credentials;
+        const { email, password } = credentials;
 
         try {
           await connectMongoDB();
-          const user = await User.findOne({ mail });
+          const user = await User.findOne({ email });
 
           if (!user) {
             return null;
