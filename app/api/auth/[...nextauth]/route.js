@@ -21,7 +21,7 @@ export const authOptions = {
             return null;
           }
 
-          const passwordsMatch = await (password === user.password);
+          const passwordsMatch =  await (password === user.password);
           
           console.log("passmatch: ", passwordsMatch);
           console.log("pass1: ", password)

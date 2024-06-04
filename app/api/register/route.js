@@ -13,6 +13,7 @@ export async function POST(req) {
       { status: 201 }
     );
   } catch (error) {
+    console.log("error: ",error)
     return NextResponse.json({ message: "Error accured." }, { status: 500 });
   }
 }

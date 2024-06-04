@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default  function Page() {
+export default function Page() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +12,7 @@ export default  function Page() {
   const router = useRouter();
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
     if (!name || !email || !password) {
       setError("All fields are necessary.");
@@ -37,13 +37,12 @@ export default  function Page() {
         form.reset();
         router.push("/");
       } else {
-        console.log("User registration failed.");
+        console.log("User registration failed. ", res.ok);
       }
     } catch (error) {
       console.log("Error during registration: ", error);
     }
   };
-  
 
   return (
     <section className="min-h-screen flex flex-col items-center  bg-base-200 gap-10 py-20 ">
