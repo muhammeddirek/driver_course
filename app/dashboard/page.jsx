@@ -2,11 +2,23 @@
 
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from 'axios';
 
 export default function Dashboard() {
   const { data: session } = useSession();
   const [kurs, setKurs] = useState("");
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    if (session?.user?.email) {
+      axios.get(`/api/user-courses?email=${session.user.email}`)
+        .then(response => {
+          setCourses(response.data);
+        })
+        .catch(error => console.error(error));
+    }
+  }, [session?.user?.email]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,9 +42,11 @@ export default function Dashboard() {
       if (res.ok) {
         const form = e.target;
         form.reset();
-        router.push("/dashboard");
+        // Yeni kursu state'e ekleyin
+        const newCourse = await res.json();
+        setCourses([...courses, newCourse]);
       } else {
-        console.log("Kurs satın alma başarılı . ", res.ok);
+        console.log("Kurs satın alma başarısız.", res.ok);
       }
     } catch (error) {
       console.log("Hata oluştu: ", error);
@@ -53,7 +67,7 @@ export default function Dashboard() {
           Log Out
         </button>
       </div>
-      <div className="flex flex-col gap-8  items-center ">
+      <div className="flex flex-col gap-8 items-center">
         <h1 className="text-5xl font-bold pb-10">Kurs Satın Al</h1>
         <div className="flex flex-row gap-5">
           <p className="font-bold">Trafik Eğitimi Kursu</p>
@@ -84,6 +98,27 @@ export default function Dashboard() {
             Satın Al!
           </button>
         </form>
+        <div className="mt-10 flex flex-col items-center py-10 max-w-7xl ">
+          <h1 className="text-3xl font-bold pb-5">Satın Alınan Kurslar</h1>
+          <div className="overflow-x-auto">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Kurs Adı</th>
+                  <th>Satın Alınan Tarih</th>
+                </tr>
+              </thead>
+              <tbody>
+                {courses.map(course => (
+                  <tr key={course._id}>
+                    <td>{course.kursAdi}</td>
+                    <td>{new Date(course.createdAt).toLocaleDateString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -136,7 +136,7 @@ export default function Page() {
                 onChange={(e) => setJob(e.target.value)}
                 type="text"
                 className="grow"
-                placeholder="İş"
+                placeholder="Görevi"
               />
             </label><label className="input input-bordered flex items-center gap-2 w-full">
               <input

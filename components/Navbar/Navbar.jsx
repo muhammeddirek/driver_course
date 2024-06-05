@@ -17,9 +17,6 @@ export default function Navbar() {
     </div>
     <div className="flex-none">
       <ul className="menu menu-horizontal px-1 items-center gap-7">
-        <li><a>
-        <Link href="/kurs_satin_al">Kurs Satın Al</Link>  
-        </a></li>
         <li><a><Link href="/kurs_bilgisi">Kurs Bilgisi</Link></a></li>
         <li>
         <a><button className="btn btn-neutral rounded">
